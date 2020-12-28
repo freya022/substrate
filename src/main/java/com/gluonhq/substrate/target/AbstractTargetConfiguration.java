@@ -211,6 +211,7 @@ public abstract class AbstractTargetConfiguration implements TargetConfiguration
 
         linkRunner.addArgs(getLinkerLibraryPathFlags());
         linkRunner.addArgs(getNativeLibsLinkFlags());
+        linkRunner.addArgs(projectConfiguration.getLinkerArgs());
         linkRunner.setInfo(true);
         linkRunner.setLogToFile(true);
         int result = linkRunner.runProcess("link");

@@ -357,6 +357,11 @@ public class InternalProjectConfiguration {
                 .orElse(Collections.emptyList());
     }
 
+    public List<String> getLinkerArgs() {
+        return Optional.ofNullable(publicConfig.getLinkerArgs())
+                .orElse(Collections.emptyList());
+    }
+
     public List<String> getInitBuildTimeList() {
         return initBuildTimeList;
     }

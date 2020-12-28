@@ -58,6 +58,7 @@ public class ProjectConfiguration {
     private List<String> reflectionList = Collections.emptyList();
     private List<String> jniList = Collections.emptyList();
     private List<String> compilerArgs = Collections.emptyList();
+    private List<String> linkerArgs = Collections.emptyList();
 
     private String appId;
     private String appName;
@@ -230,6 +231,18 @@ public class ProjectConfiguration {
      */
     public void setCompilerArgs(List<String> compilerArgs) {
         this.compilerArgs = compilerArgs;
+    }
+
+    public List<String> getLinkerArgs() {
+        return linkerArgs;
+    }
+
+    /**
+     * Sets additional lists
+     * @param linkerArgs a list of optional linker arguments
+     */
+    public void setLinkerArgs(List<String> linkerArgs) {
+        this.linkerArgs = linkerArgs;
     }
 
     public String getAppId() {
